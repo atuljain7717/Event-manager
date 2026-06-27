@@ -1,0 +1,26 @@
+:\Users\hp\OneDrive\Desktop\mp\ai-event-manager\ai-event-manager\src\data\events.sample.json
+[
+  {
+    "id": "evt1",
+    "title": "Team Meetup",
+    "date": "2025-11-12",
+    "time": "18:00",
+    "category": "Meetup",
+    "location": "Main Office",
+    "description": "Monthly team meetup to discuss progress.",
+    "attendees": [
+      { "name": "Alice", "email": "alice@example.com" },
+      { "name": "Bob", "email": "bob@example.com" }
+    ]
+  },
+  {
+    "id": "evt2",
+    "title": "Workshop: Web Basics",
+    "date": "2025-12-05",
+    "time": "10:00",
+    "category": "Workshop",
+    "location": "Room 101",
+    "description": "Hands-on workshop for beginners.",
+    "attendees": []
+  }
+]

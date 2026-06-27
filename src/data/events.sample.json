@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Sample Event 1",
+    "date": "2023-10-01",
+    "time": "10:00",
+    "category": "Workshop",
+    "location": "Room 101",
+    "description": "This is a sample description for event 1.",
+    "attendees": []
+  },
+  {
+    "id": "2",
+    "title": "Sample Event 2",
+    "date": "2023-10-15",
+    "time": "14:00",
+    "category": "Conference",
+    "location": "Main Hall",
+    "description": "This is a sample description for event 2.",
+    "attendees": []
+  },
+  {
+    "id": "3",
+    "title": "Sample Event 3",
+    "date": "2023-11-05",
+    "time": "18:00",
+    "category": "Meetup",
+    "location": "Cafe Lounge",
+    "description": "This is a sample description for event 3.",
+    "attendees": []
+  }
+]

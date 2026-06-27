@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">AI Event Manager — Stamp Logo</title>
+  <desc id="desc">Round stamp-style logo in saffron → gold (bhagva → luxerus)</desc>
+
+  <defs>
+    <!-- bhagva (saffron) to luxerus (gold) -->
+    <linearGradient id="gMain" x1="0" x2="1">
+      <stop offset="0" stop-color="#FF6F00"/>
+      <stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <!-- subtle inner glow -->
+    <radialGradient id="gInner" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#FFF6E0" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0.12"/>
+    </radialGradient>
+
+    <!-- bevel / emboss -->
+    <filter id="emboss" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="2" specularConstant="0.3" specularExponent="15" lighting-color="#ffffff">
+        <fePointLight x="-50" y="-30" z="60"/>
+      </feSpecularLighting>
+      <feComposite in2="SourceAlpha" operator="in" />
+    </filter>
+
+    <!-- outer dashed mask to emulate stamp edges -->
+    <mask id="ringMask">
+      <rect width="100%" height="100%" fill="black"/>
+      <g fill="white" stroke="white" stroke-width="6" stroke-dasharray="6 8">
+        <circle cx="100" cy="100" r="84" fill="none"/>
+      </g>
+    </mask>
+
+    <!-- circular text path -->
+    <path id="circlePath" d="M100,16 a84,84 0 1,1 -0.1,0" />
+  </defs>
+
+  <!-- main round plate -->
+  <g transform="translate(0,0)">
+    <!-- outer ring with mask for stamp effect -->
+    <circle cx="100" cy="100" r="92" fill="url(#gMain)"/>
+    <circle cx="100" cy="100" r="84" fill="url(#gInner)" filter="url(#emboss)" mask="url(#ringMask)"/>
+  </g>
+
+  <!-- center white disk for monogram -->
+  <circle cx="100" cy="100" r="54" fill="#fff" opacity="0.06"/>
+
+  <!-- AI monogram -->
+  <g transform="translate(0,0)" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700" fill="#fff">
+    <text x="100" y="112" text-anchor="middle" font-size="56" letter-spacing="-4">AI</text>
+  </g>
+
+  <!-- small decorative dots around inner ring to reinforce stamp -->
+  <g fill="#fff" opacity="0.12" transform="translate(0,0)">
+    <!-- 12 dots -->
+    <g transform="translate(100,100)">
+      <g>
+        <circle cx="0" cy="-72" r="3"/>
+        <g transform="rotate(30)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(60)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(90)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(120)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(150)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(180)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(210)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(240)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(270)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(300)"><circle cx="0" cy="-72" r="3"/></g>
+        <g transform="rotate(330)"><circle cx="0" cy="-72" r="3"/></g>
+      </g>
+    </g>
+  </g>
+
+  <!-- circular text (brand) along path -->
+  <g fill="#fff" opacity="0.85" font-size="10" font-family="Segoe UI, Roboto, Arial, sans-serif">
+    <text>
+      <textPath href="#circlePath" startOffset="50%" text-anchor="middle">AI EVENT MANAGER — LOCAL · PRIVATE · CSV EXPORT</textPath>
+    </text>
+  </g>
+
+</svg>

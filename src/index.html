@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Event Manager</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>AI Event Manager <span class="pill">✨</span></h1>
+        <div class="subtitle">Create events, manage RSVPs, export CSV — all local</div>
+      </div>
+      <div class="controls">
+        <button id="openForm" class="btn btn-primary">+ New Event</button>
+        <button id="exportCSV" class="btn btn-ghost">Export CSV</button>
+        <button id="clearAll" class="btn">Clear</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="filters" style="margin-bottom:12px">
+          <input id="search" class="input" placeholder="🔎 Search title, location or description" />
+          <select id="categoryFilter" class="input">
+            <option value="All">All categories</option>
+            <option>General</option>
+            <option>Workshop</option>
+            <option>Conference</option>
+            <option>Meetup</option>
+            <option>Birthday</option>
+          </select>
+          <input id="dateFilter" class="input" type="date" />
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div class="tiny"><strong>Total:</strong> <span id="totalCount">0</span> • Showing <span id="showCount">0</span></div>
+          <div class="pill-small" id="noevents" style="display:none">No events found</div>
+        </div>
+
+        <div id="events" class="events" aria-live="polite"></div>
+      </div>
+    </main>
+
+    <aside>
+      <div class="card" id="formCard">
+        <h3 id="formTitle">Create Event</h3>
+
+        <div class="form-group">
+          <label>Title</label>
+          <input id="title" class="input" placeholder="Event title" />
+        </div>
+
+        <div class="form-group" style="display:flex;gap:8px">
+          <div style="flex:1">
+            <label>Date</label>
+            <input id="date" type="date" class="input" />
+          </div>
+          <div style="width:140px">
+            <label>Time (HH:MM:SS)</label>
+            <input id="time" type="time" class="input" step="1" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select id="category" class="input">
+            <option>General</option>
+            <option>Meetup</option>
+            <option>Workshop</option>
+            <option>Birthday</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Location</label>
+          <input id="location" class="input" placeholder="Address or link" />
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="description" class="input" placeholder="Short description"></textarea>
+        </div>
+
+        <div style="display:flex;gap:8px">
+          <button id="saveEvent" class="btn btn-primary">Save</button>
+          <button id="resetForm" class="btn btn-ghost-sm">Reset</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Quick Tips</h4>
+        <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+          <li>Create an event and click Manage to add attendees.</li>
+          <li>Use Export CSV to download attendee lists.</li>
+          <li>All data stored locally in your browser.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="footer">Built Atul Jain • Data saved locally (localStorage)</div>
+  </div>
+
+  <!-- Modal root -->
+  <div id="modalRoot"></div>
+
+  <!-- storage helpers must load before app.js -->
+  <script src="utils/storage.js"></script>
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Event Manager — Landing</title>
+  <link rel="stylesheet" href="styles/landing.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="AI Event Manager logo" class="logo"/>
+      <span>AI Event Manager</span>
+    </div>
+    <nav>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#demo" class="nav-link">Demo</a>
+      <button id="getStarted" class="btn btn-primary">Get Started</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Plan smarter. Host better.</h1>
+        <p class="sub">A lightweight, privacy-first event manager — create events, manage RSVPs and export attendee lists in seconds.</p>
+        <div class="hero-ctas">
+          <button id="getStartedHero" class="btn btn-primary">Get Started</button>
+          <a href="#demo" class="btn btn-ghost">Watch demo</a>
+        </div>
+
+        <ul class="badges">
+          <li>Local-first</li>
+          <li>No sign-up</li>
+          <li>CSV export</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#6c5ce7"/>
+              <stop offset="1" stop-color="#5a4ae6"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(300,300)">
+            <path d="M120,-160C160,-120,180,-60,180,-10C180,40,160,80,120,120C80,160,40,180,-10,190C-60,200,-120,200,-160,160C-200,120,-220,60,-220,0C-220,-60,-200,-120,-160,-160C-120,-200,-60,-220,0,-220C60,-220,120,-200,120,-160Z" fill="url(#g)">
+              <animate attributeName="d" dur="8s" repeatCount="indefinite" values="M120,-160C160,-120,180,-60,180,-10C180,40,160,80,120,120C80,160,40,180,-10,190C-60,200,-120,200,-160,160C-200,120,-220,60,-220,0C-220,-60,-200,-120,-160,-160C-120,-200,-60,-220,0,-220C60,-220,120,-200,120,-160Z;
+              M140,-140C180,-100,190,-40,170,10C150,60,110,100,70,130C30,160,-10,170,-60,180C-110,190,-170,180,-190,130C-210,80,-200,10,-170,-40C-140,-90,-70,-140,0,-150C70,-160,100,-180,140,-140Z;
+              M120,-160C160,-120,180,-60,180,-10C180,40,160,80,120,120C80,160,40,180,-10,190C-60,200,-120,200,-160,160C-200,120,-220,60,-220,0C-220,-60,-200,-120,-160,-160C-120,-200,-60,-220,0,-220C60,-220,120,-200,120,-160Z"/>
+            </path>
+          </g>
+        </svg>
+
+        <div class="mock">
+          <div class="mock-header">
+            <span class="pill">Events</span>
+            <span class="pill small">3 upcoming</span>
+          </div>
+          <div class="mock-list">
+            <div class="mock-item"><strong>Team Meetup</strong><span>Apr 28</span></div>
+            <div class="mock-item"><strong>Workshop</strong><span>May 2</span></div>
+            <div class="mock-item"><strong>Launch</strong><span>May 18</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="feature">
+        <h3>Fast event creation</h3>
+        <p>Create an event in under 30 seconds with an intuitive form.</p>
+      </div>
+      <div class="feature">
+        <h3>Local-first & Private</h3>
+        <p>All data stays in your browser (localStorage) — export anytime.</p>
+      </div>
+      <div class="feature">
+        <h3>CSV export</h3>
+        <p>Download attendees and details with a single click.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="demo">
+    <h2>Quick demo</h2>
+    <p class="muted">Open the app and try creating a sample event.</p>
+    <div class="demo-actions">
+      <button id="getStartedDemo" class="btn btn-primary">Open App</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    Built by Atul Jain • with ❤️ for developers 
+  </footer>
+
+  <script src="scripts/landing.js" defer></script>
+</body>
+</html>
